@@ -20,5 +20,9 @@ class InteractiveRecord
     column_names.compact
   end
 
+  def initialize(options={})
+
+  end
+
 
 end
