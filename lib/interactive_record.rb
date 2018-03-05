@@ -55,6 +55,6 @@ class InteractiveRecord
 
   def self.find_by(row)
     sql = "SELECT * FROM #{self.table_name}"
-
+    DB[:conn].execute(sql)
   end
 end
