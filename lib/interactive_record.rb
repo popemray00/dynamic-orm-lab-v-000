@@ -6,11 +6,11 @@ class InteractiveRecord
   def self.table_name
     self.to_s.downcase.pluralize
   end
-  
+
   def self.column_names
     DB[:conn].results_as_hash = true
 
-    sql =   "prgma table_info('#{table_name}')"
+    sql = "prgma table_info('#{table_name}')"
 
     table_info = DB[:conn].execute(sql)
     column_names = []
